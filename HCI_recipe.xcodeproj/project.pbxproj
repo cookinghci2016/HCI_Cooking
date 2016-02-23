@@ -16,6 +16,7 @@
 		40DE69571C7A6AF1008390B8 /* FruitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE69561C7A6AF1008390B8 /* FruitController.swift */; };
 		40DE69591C7A6AFE008390B8 /* SeaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE69581C7A6AFE008390B8 /* SeaController.swift */; };
 		40FDEFC01C7BE292004D2EA5 /* IngridentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FDEFBF1C7BE292004D2EA5 /* IngridentTypes.swift */; };
+		40FDEFC61C7C4610004D2EA5 /* IngPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FDEFC51C7C4610004D2EA5 /* IngPhotoCell.swift */; };
 		8BB3B2D21C72C5CA00DC97B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3B2D11C72C5CA00DC97B4 /* AppDelegate.swift */; };
 		8BB3B2D41C72C5CA00DC97B4 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */; };
 		8BB3B2D71C72C5CA00DC97B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		40DE69561C7A6AF1008390B8 /* FruitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitController.swift; sourceTree = "<group>"; };
 		40DE69581C7A6AFE008390B8 /* SeaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaController.swift; sourceTree = "<group>"; };
 		40FDEFBF1C7BE292004D2EA5 /* IngridentTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngridentTypes.swift; sourceTree = "<group>"; };
+		40FDEFC51C7C4610004D2EA5 /* IngPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngPhotoCell.swift; sourceTree = "<group>"; };
 		8BB3B2CE1C72C5CA00DC97B4 /* HCI_recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCI_recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB3B2D11C72C5CA00DC97B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HCI_recipe/AppDelegate.swift; sourceTree = "<group>"; };
 		8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				409E78F91C7BC688005FC434 /* CategoryRow.swift */,
+				40FDEFC51C7C4610004D2EA5 /* IngPhotoCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */,
 				8BB3B2D21C72C5CA00DC97B4 /* AppDelegate.swift in Sources */,
 				40DE69591C7A6AFE008390B8 /* SeaController.swift in Sources */,
+				40FDEFC61C7C4610004D2EA5 /* IngPhotoCell.swift in Sources */,
 				8BB3B3001C73880C00DC97B4 /* IngredientCell.swift in Sources */,
 				8BEA8C131C7BFC72009B42C3 /* timerViewController.swift in Sources */,
 				40DE690D1C79178A008390B8 /* SearchByIngController.swift in Sources */,
