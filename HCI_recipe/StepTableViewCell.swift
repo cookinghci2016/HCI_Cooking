@@ -20,33 +20,9 @@ class StepTableViewCell: UITableViewCell {
     @IBOutlet var stepReminder: UILabel!
     @IBOutlet var timerView: drawUIView!
     @IBOutlet var timerLabel: UILabel!
-    @IBOutlet var restartButton: UIButton!
     @IBOutlet var startButton: UIButton!
 
     
-    var timeInterval: NSTimeInterval = 0 {
-        didSet {
-            self.timerLabel.text = "\(timeInterval)"
-        }
-    }
-    
-    func updateUI() {
-        if self.timeInterval > 0 {
-            --self.timeInterval
-        }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: Selector("updateUI"), name: "CustomCellUpdate", object: nil)
-    }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
     
     var isObserving = false;
     class var expandedHeight: CGFloat { get { return 330 } }

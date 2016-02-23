@@ -39,18 +39,7 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
     var stepTip = ["Tips for step1","Tips for step2"]
     var stepReminder = ["Chicken:500g","Ketchup:2Tsp\nSugar:1Tsp"]
     var stepTimer = [5,10]
-    
-    var timer: NSTimer!
-    
-    func fireCellsUpdate() {
-        let notification = NSNotification(name: "CustomCellUpdate", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
-    }
-    
-    deinit {
-        self.timer?.invalidate()
-        self.timer = nil
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,8 +63,6 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
         caloryLabel.frame = CGRectMake(0, 0, 65,50)
         caloryLabel.text = "Calorie\n\(calorie)K"
         
-        //self.timer = NSTimer(timeInterval: 1.0, target: self, selector: Selector("fireCellsUpdate"), userInfo: nil, repeats: true)
-        //NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
         
     }
     var clicked = false
@@ -119,19 +106,16 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
             cell.stepReminder.text = stepReminder[indexPath.row]
             cell.stepReminder.numberOfLines = 0
             cell.timerLabel.text = String(format: "%02d:%02d",stepTimer[indexPath.row],0)
-            cell.startButton.tag = stepTimer[indexPath.row]
+            cell.startButton.tag = indexPath.row
             cell.startButton.addTarget(self, action: "starttimer:", forControlEvents: .TouchUpInside)
-            //cell.restartButton.tag = stepTimer[indexPath.row]
-            //cell.restartButton.addTarget(self, action: "restart:", forControlEvents: .TouchUpInside)
-            //cell.timeInterval = NSTimeInterval(stepTimer[indexPath.row])
             cell.tipButton.tag = indexPath.row
             cell.tipButton.addTarget(self, action: "showtip:", forControlEvents: .TouchUpInside)
             return cell
         }
         
     }
-    @IBAction func startimer(sender: UIButton){
-        
+    @IBAction func starttimer(sender: UIButton){
+         performSegueWithIdentifier("timer", sender: sender)
     }
 
     var selectedIndexPath : NSIndexPath?
@@ -204,6 +188,15 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     @IBAction func gotoStep(sender: UIButton) {
         ScrollView.contentOffset = CGPointMake(0,stepLabel.frame.minY)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "timer"){
+            let totalTime = stepTimer[sender!.tag]
+            let DestViewController = segue.destinationViewController as! timerViewController
+            DestViewController.totalTime = totalTime
+        }
+        
     }
 
 }

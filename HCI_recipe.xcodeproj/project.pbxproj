@@ -28,6 +28,7 @@
 		8BBDA6241C74262700186CBA /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6231C74262700186CBA /* MealTableViewCell.swift */; };
 		8BBDA6261C742D0600186CBA /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6251C742D0600186CBA /* MealTableViewController.swift */; };
 		8BD828F01C76A522006156BA /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD828EF1C76A522006156BA /* StepTableViewCell.swift */; };
+		8BEA8C131C7BFC72009B42C3 /* timerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA8C121C7BFC72009B42C3 /* timerViewController.swift */; };
 		8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		8BBDA6231C74262700186CBA /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		8BBDA6251C742D0600186CBA /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		8BD828EF1C76A522006156BA /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
+		8BEA8C121C7BFC72009B42C3 /* timerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timerViewController.swift; sourceTree = "<group>"; };
 		8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = drawUIView.swift; path = HCI_recipe/drawUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 			children = (
 				8BBDA6251C742D0600186CBA /* MealTableViewController.swift */,
 				8BB3B2D31C72C5CA00DC97B4 /* RecipeViewController.swift */,
+				8BEA8C121C7BFC72009B42C3 /* timerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -173,11 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				40DE69081C791321008390B8 /* HCI_SearchByIng */,
-				8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */,
 				409E78EE1C7AF1E4005FC434 /* ingserch.swift */,
 				8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */,
 				40DE69101C795384008390B8 /* Viewtest.swift */,
 				8BB3B2D11C72C5CA00DC97B4 /* AppDelegate.swift */,
+				8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */,
 				8BB3B2D01C72C5CA00DC97B4 /* HCI_recipe */,
 				8BB3B2E51C72C5CA00DC97B4 /* HCI_recipeTests */,
 				8BB3B2F01C72C5CA00DC97B4 /* HCI_recipeUITests */,
@@ -370,6 +373,7 @@
 				8BB3B2D21C72C5CA00DC97B4 /* AppDelegate.swift in Sources */,
 				40DE69591C7A6AFE008390B8 /* SeaController.swift in Sources */,
 				8BB3B3001C73880C00DC97B4 /* IngredientCell.swift in Sources */,
+				8BEA8C131C7BFC72009B42C3 /* timerViewController.swift in Sources */,
 				40DE690D1C79178A008390B8 /* SearchByIngController.swift in Sources */,
 				8BBDA6221C74117300186CBA /* Recipe.swift in Sources */,
 				40507C1E1C7BCEB1009677A5 /* MeatController.swift in Sources */,
