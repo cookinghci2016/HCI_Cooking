@@ -241,7 +241,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="widthClass=compact" misplaced="YES">
-                                                                <rect key="frame" x="133.5" y="11" width="56.5" height="20.5"/>
+                                                                <rect key="frame" x="133" y="11" width="57" height="21"/>
                                                             </variation>
                                                         </label>
                                                     </subviews>
@@ -428,9 +428,6 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="0.0" y="28" width="90" height="21"/>
-                                                                    </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sa-YK-aRq">
                                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -730,8 +727,7 @@
                                                 <exclude reference="ezN-Hc-CfU"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="34" y="538" width="341" height="1374"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="Y5j-JM-fup"/>
                                                 <include reference="ezN-Hc-CfU"/>
@@ -1131,7 +1127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLk-Em-8z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1521" y="1481"/>
+            <point key="canvasLocation" x="-1506.75" y="1407.5"/>
         </scene>
         <!--Meat Controller-->
         <scene sceneID="mGe-GI-x0D">
@@ -1145,15 +1141,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH1-v8-b16">
-                                <rect key="frame" x="146" y="602" width="50" height="50"/>
-                                <state key="normal" image="Ok"/>
-                                <connections>
-                                    <segue destination="OYI-n5-2BH" kind="show" id="Rc3-SJ-frS"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-QI-PLy">
-                                <rect key="frame" x="0.0" y="107" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="l8I-fJ-IBb" customClass="CategoryRow" customModule="HCI_recipe">
@@ -1188,6 +1177,9 @@
                                                             </view>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="376" height="79"/>
+                                                    </variation>
                                                     <connections>
                                                         <outlet property="dataSource" destination="l8I-fJ-IBb" id="d2H-kC-2aN"/>
                                                         <outlet property="delegate" destination="l8I-fJ-IBb" id="GCa-vC-6mS"/>
@@ -1215,21 +1207,43 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="37" height="21"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvG-kU-gnZ">
                                         <rect key="frame" x="0.0" y="21" width="37" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="21" width="37" height="30"/>
+                                        </variation>
                                     </textField>
                                 </subviews>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="42" y="598" width="37" height="51"/>
+                                </variation>
                             </stackView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-Gx-0ft">
-                                <rect key="frame" x="0.0" y="63" width="375" height="44"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZE8-Ge-OTr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                                </variation>
                                 <connections>
-                                    <outlet property="delegate" destination="p6M-KA-aMM" id="NOs-N7-3sP"/>
+                                    <outlet property="delegate" destination="p6M-KA-aMM" id="dbA-wF-ZQL"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH1-v8-b16">
+                                <rect key="frame" x="146" y="602" width="50" height="50"/>
+                                <state key="normal" image="Ok"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="162" y="609" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="OYI-n5-2BH" kind="show" id="Rc3-SJ-frS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1237,20 +1251,30 @@
                             <constraint firstItem="RH1-v8-b16" firstAttribute="top" secondItem="SHo-QI-PLy" secondAttribute="bottom" id="Ng9-ot-iNO"/>
                             <constraint firstItem="47j-XO-auK" firstAttribute="top" secondItem="RH1-v8-b16" secondAttribute="bottom" id="kaW-7P-1NK"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZE8-Ge-OTr"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ZE8-Ge-OTr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="9hm-Ls-a2Z" id="ZuT-Fi-x9J"/>
+                        <outlet property="searchDisplayController" destination="Z4z-Or-rzK" id="mPu-g6-RqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbO-Rn-KXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="9hm-Ls-a2Z">
+                <searchDisplayController id="Z4z-Or-rzK">
                     <connections>
-                        <outlet property="delegate" destination="p6M-KA-aMM" id="ZsD-Wh-mm5"/>
-                        <outlet property="searchBar" destination="8n6-Gx-0ft" id="eED-u2-GPs"/>
-                        <outlet property="searchContentsController" destination="p6M-KA-aMM" id="QgM-CT-AKK"/>
-                        <outlet property="searchResultsDataSource" destination="p6M-KA-aMM" id="Qxz-oY-qm0"/>
-                        <outlet property="searchResultsDelegate" destination="p6M-KA-aMM" id="OD0-yT-uoz"/>
+                        <outlet property="delegate" destination="p6M-KA-aMM" id="RQg-Rr-t4g"/>
+                        <outlet property="searchBar" destination="ZE8-Ge-OTr" id="KCD-N8-NVJ"/>
+                        <outlet property="searchContentsController" destination="p6M-KA-aMM" id="2Ih-ge-fTV"/>
+                        <outlet property="searchResultsDataSource" destination="p6M-KA-aMM" id="128-hN-u4o"/>
+                        <outlet property="searchResultsDelegate" destination="p6M-KA-aMM" id="JLx-tn-CGn"/>
                     </connections>
                 </searchDisplayController>
             </objects>
@@ -1265,15 +1289,14 @@
                         <viewControllerLayoutGuide type="bottom" id="50a-fs-2ju"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DFR-qx-k7z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gX-dl-lVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559.5" y="2365.5"/>
+            <point key="canvasLocation" x="-703.5" y="2327"/>
         </scene>
         <!--Sea Controller-->
         <scene sceneID="FT0-K5-z4S">
@@ -1284,15 +1307,14 @@
                         <viewControllerLayoutGuide type="bottom" id="lvC-xb-frc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GzY-rB-mIF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AY4-ea-D5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.5" y="2357.5"/>
+            <point key="canvasLocation" x="54" y="2327"/>
         </scene>
         <!--Veg Controller-->
         <scene sceneID="ARF-FL-jwI">
@@ -1303,15 +1325,14 @@
                         <viewControllerLayoutGuide type="bottom" id="cMn-wA-EYo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uIH-8f-McF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEf-8x-kTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.5" y="1317.5"/>
+            <point key="canvasLocation" x="189" y="1284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Db2-ju-iy7">
