@@ -9,6 +9,7 @@
 import UIKit
 
 class IngPhotoCell: UICollectionViewCell {
-    
+    var tapped : Bool = false
     @IBOutlet weak var Img_View: UIImageView!
+    @IBOutlet weak var nameSub: UILabel!
 }

@@ -11,10 +11,13 @@ import UIKit
 class CategoryRow : UITableViewCell,UICollectionViewDelegate {
     var num_sec:Int = 0;
     var dic = [UIImage]()
+    var nm = [String]()
 
     // Outlet of collectionView  very important!!!
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
 }
 
 extension CategoryRow : UICollectionViewDataSource {
@@ -27,6 +30,7 @@ extension CategoryRow : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("IngCell", forIndexPath: indexPath) as! IngPhotoCell
         // Change image for imgView
         cell.Img_View.image = dic[indexPath.row]
+        cell.nameSub.text = nm[indexPath.row]
 //        print("Current Section = ")
 //        print(indexPath.row)
         return cell
@@ -34,7 +38,10 @@ extension CategoryRow : UICollectionViewDataSource {
     
     // 某个cell 被选中的事件处理
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("IngCell", forIndexPath: indexPath) as! IngPhotoCell
+//        cell.selectedBackgroundView = UIImageView(image: UIImage(named: "Placeholder"))
+        cell.backgroundColor =  UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.8)
+        print("tapped")
     }
     
 }

@@ -18,19 +18,19 @@ class MeatController: UIViewController,UITableViewDataSource {
 
     // MARK:  Inititialization
     func loadSampleMeat() {
-        let beef_sub = ["beef_loin", "beef_round", "beef_sirloin"]
+        let beef_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
         let beef = IngridentTypes(type : "Beef", photo: UIImage(named: "Ox"), sub_names: beef_sub)!
         
-        let chick_sub = ["beef_loin", "beef_round", "beef_sirloin"]
+        let chick_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
         let chick = IngridentTypes(type : "Chick", photo: UIImage(named: "Chicken"), sub_names: chick_sub)!
 
-        let pork_sub = ["beef_loin", "beef_round", "beef_sirloin"]
+        let pork_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
         let pork = IngridentTypes(type : "Pork", photo: UIImage(named: "Pig"), sub_names: pork_sub)!
 
-        let lamb_sub = ["beef_loin", "beef_round", "beef_sirloin"]
+        let lamb_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
         let lamb = IngridentTypes(type : "Lamb", photo: UIImage(named: "Sheep"), sub_names: lamb_sub)!
 
-        let duck_sub = ["beef_loin", "beef_round", "beef_sirloin"]
+        let duck_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
         let duck = IngridentTypes(type : "Duck", photo: UIImage(named: "Duck"), sub_names: duck_sub)!
 
         allmeat += [beef, chick, pork, lamb, duck]
@@ -57,13 +57,14 @@ class MeatController: UIViewController,UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
         // Get current row and assign item numbers
         let cur_meat = allmeat[indexPath.section]
-        print("I am here, count =")
+//        print("I am here, count =")
 
         cell.num_sec = cur_meat.sub_imgs.count;
-        print(indexPath.section)
+//        print(indexPath.section)
 
         // Assign image array to UItable View Cell; Including the Image for ingredient, ox, pork, chicken and etc.
         cell.dic = allmeat[indexPath.section].sub_imgs
+        cell.nm = allmeat[indexPath.section].sub_names
         return cell
     }
 
