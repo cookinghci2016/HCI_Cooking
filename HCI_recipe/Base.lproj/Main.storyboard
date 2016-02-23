@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6nf-Bo-szF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6nf-Bo-szF">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ufu-eR-oBc" id="sAl-KM-uTk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-js-SJD">
@@ -226,7 +226,7 @@
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="zaB-iD-24d" customClass="IngredientCell" customModule="HCI_recipe" customModuleProvider="target">
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zaB-iD-24d" id="bpM-05-VfR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H43-V1-GmH">
@@ -240,9 +240,6 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact" misplaced="YES">
-                                                                <rect key="frame" x="133.5" y="11" width="56.5" height="20.5"/>
-                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
@@ -549,14 +546,14 @@
                                                                 <mask key="constraints">
                                                                     <exclude reference="A4S-q4-lsj"/>
                                                                     <exclude reference="OU1-sO-G8q"/>
+                                                                    <exclude reference="Ad2-ln-Dd4"/>
+                                                                    <exclude reference="One-zf-HTG"/>
+                                                                    <exclude reference="W4B-tP-4qF"/>
                                                                     <exclude reference="ie7-Rx-Mex"/>
                                                                     <exclude reference="iuc-N9-bOz"/>
                                                                     <exclude reference="LRc-a0-ht1"/>
                                                                     <exclude reference="Y1l-Vz-LjL"/>
                                                                     <exclude reference="yI3-sT-OmO"/>
-                                                                    <exclude reference="Ad2-ln-Dd4"/>
-                                                                    <exclude reference="One-zf-HTG"/>
-                                                                    <exclude reference="W4B-tP-4qF"/>
                                                                 </mask>
                                                             </variation>
                                                             <variation key="widthClass=compact">
@@ -568,14 +565,14 @@
                                                                 <mask key="constraints">
                                                                     <include reference="A4S-q4-lsj"/>
                                                                     <include reference="OU1-sO-G8q"/>
+                                                                    <exclude reference="Ad2-ln-Dd4"/>
+                                                                    <include reference="One-zf-HTG"/>
+                                                                    <include reference="W4B-tP-4qF"/>
                                                                     <include reference="ie7-Rx-Mex"/>
                                                                     <include reference="iuc-N9-bOz"/>
                                                                     <exclude reference="LRc-a0-ht1"/>
                                                                     <include reference="Y1l-Vz-LjL"/>
                                                                     <include reference="yI3-sT-OmO"/>
-                                                                    <exclude reference="Ad2-ln-Dd4"/>
-                                                                    <include reference="One-zf-HTG"/>
-                                                                    <include reference="W4B-tP-4qF"/>
                                                                 </mask>
                                                             </variation>
                                                         </view>
@@ -1121,7 +1118,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l8I-fJ-IBb" id="yc8-z4-0Tb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oVC-eG-Out">
@@ -1135,7 +1132,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IngCell" id="qbL-VQ-FoG">
-                                                            <rect key="frame" x="5" y="3.5" width="66" height="64"/>
+                                                            <rect key="frame" x="5" y="4" width="66" height="64"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="64"/>
