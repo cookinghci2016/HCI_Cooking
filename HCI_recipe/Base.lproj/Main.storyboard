@@ -1044,7 +1044,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wGO-gX-Pj2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jiX-Ff-JV1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-aV-Vb3">
@@ -1120,6 +1120,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6cY-DI-Vwk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Sea" destination="e79-16-f8P" id="5Qp-bI-oHF"/>
                         <outlet property="Yummy" destination="Xsr-WH-EdO" id="epF-vn-6cL"/>
@@ -1130,7 +1131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLk-Em-8z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1124.5" y="1433.5"/>
+            <point key="canvasLocation" x="-1521" y="1481"/>
         </scene>
         <!--Meat Controller-->
         <scene sceneID="mGe-GI-x0D">
@@ -1141,7 +1142,7 @@
                         <viewControllerLayoutGuide type="bottom" id="47j-XO-auK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AHW-Yv-PGt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH1-v8-b16">
@@ -1152,7 +1153,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-QI-PLy">
-                                <rect key="frame" x="0.0" y="94" width="375" height="496"/>
+                                <rect key="frame" x="0.0" y="107" width="375" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="l8I-fJ-IBb" customClass="CategoryRow" customModule="HCI_recipe">
@@ -1222,6 +1223,13 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-Gx-0ft">
+                                <rect key="frame" x="0.0" y="63" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="p6M-KA-aMM" id="NOs-N7-3sP"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1230,8 +1238,21 @@
                             <constraint firstItem="47j-XO-auK" firstAttribute="top" secondItem="RH1-v8-b16" secondAttribute="bottom" id="kaW-7P-1NK"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="9hm-Ls-a2Z" id="ZuT-Fi-x9J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbO-Rn-KXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="9hm-Ls-a2Z">
+                    <connections>
+                        <outlet property="delegate" destination="p6M-KA-aMM" id="ZsD-Wh-mm5"/>
+                        <outlet property="searchBar" destination="8n6-Gx-0ft" id="eED-u2-GPs"/>
+                        <outlet property="searchContentsController" destination="p6M-KA-aMM" id="QgM-CT-AKK"/>
+                        <outlet property="searchResultsDataSource" destination="p6M-KA-aMM" id="Qxz-oY-qm0"/>
+                        <outlet property="searchResultsDelegate" destination="p6M-KA-aMM" id="OD0-yT-uoz"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-559.5" y="1317.5"/>
         </scene>
@@ -1244,10 +1265,11 @@
                         <viewControllerLayoutGuide type="bottom" id="50a-fs-2ju"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DFR-qx-k7z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gX-dl-lVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1262,10 +1284,11 @@
                         <viewControllerLayoutGuide type="bottom" id="lvC-xb-frc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GzY-rB-mIF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AY4-ea-D5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1280,10 +1303,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cMn-wA-EYo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uIH-8f-McF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEf-8x-kTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
