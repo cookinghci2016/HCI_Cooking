@@ -25,8 +25,8 @@ class StepTableViewCell: UITableViewCell {
     
     
     var isObserving = false;
-    class var expandedHeight: CGFloat { get { return 330 } }
-    class var defaultHeight: CGFloat  { get { return 300  } }
+    class var expandedHeight: CGFloat { get { return 360 } }
+    class var defaultHeight: CGFloat  { get { return 330  } }
     
     func checkHeight() {
         tipText.hidden = (frame.size.height < StepTableViewCell.expandedHeight)

@@ -26,8 +26,8 @@ class MealTableViewController: UITableViewController {
     }
     
     func loadSampleMeals() {
-        let photo1 = UIImage(named: "SweetSour_Chicken")!
-        let meal1 = Recipe(name: "Sweet and Sour Chicken", photo: photo1, description: "description for recipe 1")!
+        let photo1 = UIImage(named: "Chicken_Parmesan")!
+        let meal1 = Recipe(name: "The BEST Chicken Parmesan", photo: photo1, description: "description for recipe 1")!
         
         let photo2 = UIImage(named: "BakedgeneralTSO_Chicken")!
         let meal2 = Recipe(name: "Baked general TSO Chicken", photo: photo2, description: "description for recipe 2")!
@@ -35,7 +35,10 @@ class MealTableViewController: UITableViewController {
         let photo3 = UIImage(named: "OvenFried_Chicken")!
         let meal3 = Recipe(name: "Oven Fried Chicken", photo: photo3, description: "description for recipe 3")!
         
-        meals += [meal1, meal2, meal3]
+        let photo4 = UIImage(named: "SweetSour_Chicken")!
+        let meal4 = Recipe(name: "Sweet and Sour Chicken", photo: photo4, description: "description for recipe 4")!
+        
+        meals += [meal1, meal2, meal3, meal4]
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

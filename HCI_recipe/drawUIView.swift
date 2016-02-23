@@ -15,8 +15,8 @@ class drawUIView: UIView {
         // Drawing code
         let context = UIGraphicsGetCurrentContext()
         let rectangle = CGRectMake(0,0,rect.width,rect.height)
-        CGContextMoveToPoint(context, 5, 22)
-        CGContextAddLineToPoint(context, 85, 22)
+        CGContextMoveToPoint(context, 5, 20)
+        CGContextAddLineToPoint(context, rect.width-5, 20)
         CGContextAddRect(context, rectangle)
         CGContextStrokePath(context)
     }

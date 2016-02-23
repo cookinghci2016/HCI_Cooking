@@ -27,18 +27,21 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet var likeButton: UIButton!
     
     var testRecipe = Recipe!()
-    var thisRecipe = Recipe(name:"Sweat and Sour Chicken",photo:UIImage(named: "SweetSour_Chicken")!, description: "")!
-    var ingredients = ["Chicken","Sesame","Ketchup","Sugar"]
-    var dosages = ["500g","1tsp","2Tsp","1Tsp"]
+    var thisRecipe = Recipe(name:"The BEST Chicken Parmesan",photo:UIImage(named: "Chicken_Parmesan")!, description: "")!
+    var ingredients = ["mushrooms","sun-dried tomatoes","chicken breasts","basil","parsley","rosemary","thyme","garlic","olive oil","Serrano ham"]
+    var dosages = ["1/4 cup","1/3 cup","2","1 bunch","1 bunch","1 sprig","1 sprig","1 clove","1/3 cup","4 slices"]
     var cookingtime = 30
     var flavor = "Sweet"
     var calorie = 300
-    var stepTitle = ["Step 1","Step 2"]
-    var stepDescription = ["this is step 1","this is step 2"]
-    var stepPhoto = [UIImage(named: "SweetSour_Chicken")!,UIImage(named: "SweetSour_Chicken")!]
-    var stepTip = ["Tips for step1","Tips for step2"]
-    var stepReminder = ["Chicken:500g","Ketchup:2Tsp\nSugar:1Tsp"]
-    var stepTimer = [5,10]
+    var stepTitle = ["Step 1","Step 2","Step3","Step4","Step5"]
+    var stepDescription = ["Preheat the grill for 5 mins. Finely slice mushrooms. Drain sun-dried tomatoes and cut into strips.","With your fingers, carefully loosen the skin of the chicken breast and place some of the sliced mushrooms and sun-dried tomatoes underneath it.","For the pesto, pick basil, parsley, rosemary, and thyme leaves. Peel and crush garlic clove. Puree everything in a food processor with olive oil, salt and pepper.","Cover stuffed chicken breasts with pesto on both sides. Tightly wrap two slices of Serrano ham around each chicken breast.","Grill chicken and turn occasionally until the ham is crispy. Move the chicken onto indirect heat and finish cooking for 10 mins. Season again with salt and pepper and serve with a grilled corncob."]
+    var stepPhoto = [UIImage(named: "process0")!,UIImage(named: "process1")!,UIImage(named: "process2")!,UIImage(named: "process3")!,UIImage(named: "process4")!]
+    var stepTip = ["Tips for step1","","","Tips for step4",""]
+    var tipHidden = [false,true,true,false,true]
+    var stepReminder = ["mushrooms:1/4cup\nsun-dried tomatoes:\n1/3cup","Chicken breast:2","basil and parsely:\n1 bunch each\nrosemary and thyme:\n1sprig each","Serrano ham:\n4slices",""]
+    var reminderHidden = [false,false,false,false,true]
+    var stepTimer = [5,0,0,0,10]
+    var timerHidden = [false,true,true,true,false]
 
 
     override func viewDidLoad() {
@@ -101,10 +104,15 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
             let cell = self.stepView.dequeueReusableCellWithIdentifier("stepcell", forIndexPath: indexPath) as! StepTableViewCell
             cell.stepPic.image = stepPhoto[indexPath.row]
             cell.stepTitle.text = stepTitle[indexPath.row]
+            cell.stepDescription.numberOfLines = 0
+            cell.stepDescription.lineBreakMode = NSLineBreakMode.ByWordWrapping
             cell.stepDescription.text = stepDescription[indexPath.row]
+            cell.tipButton.hidden = tipHidden[indexPath.row]
             cell.tipText.text = stepTip[indexPath.row]
+            cell.reminderView.hidden = reminderHidden[indexPath.row]
             cell.stepReminder.text = stepReminder[indexPath.row]
             cell.stepReminder.numberOfLines = 0
+            cell.timerView.hidden = timerHidden[indexPath.row]
             cell.timerLabel.text = String(format: "%02d:%02d",stepTimer[indexPath.row],0)
             cell.startButton.tag = indexPath.row
             cell.startButton.addTarget(self, action: "starttimer:", forControlEvents: .TouchUpInside)
@@ -172,7 +180,7 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
                 return StepTableViewCell.defaultHeight
             }
         } else{
-            return 44
+            return 24
         }
         
     }
