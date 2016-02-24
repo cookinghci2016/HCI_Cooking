@@ -28,6 +28,8 @@
 		8BBDA6221C74117300186CBA /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6211C74117300186CBA /* Recipe.swift */; };
 		8BBDA6241C74262700186CBA /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6231C74262700186CBA /* MealTableViewCell.swift */; };
 		8BBDA6261C742D0600186CBA /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDA6251C742D0600186CBA /* MealTableViewController.swift */; };
+		8BC74B371C7D45AA00EE4F22 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC74B361C7D45AA00EE4F22 /* mainViewController.swift */; };
+		8BC74B391C7D45DB00EE4F22 /* recipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC74B381C7D45DB00EE4F22 /* recipeCollectionViewCell.swift */; };
 		8BD828F01C76A522006156BA /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD828EF1C76A522006156BA /* StepTableViewCell.swift */; };
 		8BEA8C131C7BFC72009B42C3 /* timerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA8C121C7BFC72009B42C3 /* timerViewController.swift */; };
 		8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */; };
@@ -78,6 +80,8 @@
 		8BBDA6211C74117300186CBA /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8BBDA6231C74262700186CBA /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		8BBDA6251C742D0600186CBA /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		8BC74B361C7D45AA00EE4F22 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		8BC74B381C7D45DB00EE4F22 /* recipeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BD828EF1C76A522006156BA /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		8BEA8C121C7BFC72009B42C3 /* timerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timerViewController.swift; sourceTree = "<group>"; };
 		8BF4DEC01C77A2BD00E96EF8 /* drawUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = drawUIView.swift; path = HCI_recipe/drawUIView.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				40DE69101C795384008390B8 /* Viewtest.swift */,
 				8BB3B2D11C72C5CA00DC97B4 /* AppDelegate.swift */,
 				8BB3B2D51C72C5CA00DC97B4 /* Main.storyboard */,
+				8BC74B361C7D45AA00EE4F22 /* mainViewController.swift */,
+				8BC74B381C7D45DB00EE4F22 /* recipeCollectionViewCell.swift */,
 				8BB3B2D01C72C5CA00DC97B4 /* HCI_recipe */,
 				8BB3B2E51C72C5CA00DC97B4 /* HCI_recipeTests */,
 				8BB3B2F01C72C5CA00DC97B4 /* HCI_recipeUITests */,
@@ -373,6 +379,7 @@
 				8BD828F01C76A522006156BA /* StepTableViewCell.swift in Sources */,
 				8BB3B2D41C72C5CA00DC97B4 /* RecipeViewController.swift in Sources */,
 				8BF4DEC11C77A2BD00E96EF8 /* drawUIView.swift in Sources */,
+				8BC74B371C7D45AA00EE4F22 /* mainViewController.swift in Sources */,
 				8BB3B2D21C72C5CA00DC97B4 /* AppDelegate.swift in Sources */,
 				40DE69591C7A6AFE008390B8 /* SeaController.swift in Sources */,
 				40FDEFC61C7C4610004D2EA5 /* IngPhotoCell.swift in Sources */,
@@ -385,6 +392,7 @@
 				8BBDA6261C742D0600186CBA /* MealTableViewController.swift in Sources */,
 				40DE69571C7A6AF1008390B8 /* FruitController.swift in Sources */,
 				8BBDA6241C74262700186CBA /* MealTableViewCell.swift in Sources */,
+				8BC74B391C7D45DB00EE4F22 /* recipeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

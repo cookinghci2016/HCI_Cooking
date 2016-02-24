@@ -27,7 +27,6 @@ class RecipeViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet var likeButton: UIButton!
     
     var testRecipe = Recipe!()
-    var thisRecipe = Recipe(name:"The BEST Chicken Parmesan",photo:UIImage(named: "Chicken_Parmesan")!, description: "")!
     var ingredients = ["mushrooms","sun-dried tomatoes","chicken breasts","basil","parsley","rosemary","thyme","garlic","olive oil","Serrano ham"]
     var dosages = ["1/4 cup","1/3 cup","2","1 bunch","1 bunch","1 sprig","1 sprig","1 clove","1/3 cup","4 slices"]
     var cookingtime = 30
