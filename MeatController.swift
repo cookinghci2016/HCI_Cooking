@@ -1,27 +1,48 @@
-//
+
 //  MeatController.swift
 //  HCI_recipe
 //
 //  Created by allen woo on 2/22/16.
 //  Copyright © 2016 Jie Tan. All rights reserved.
-//
+
 
 import UIKit
 
 class MeatController: UIViewController,UITableViewDataSource {
     var allmeat = [IngridentTypes]()
-  
+    // Dictionay to store selected item
+    var selected_item =  [Int: String]()
+    
+    @IBOutlet weak var tableView: UITableView!
+    // Store Search 
+    var filteredMeat = [IngridentTypes]()
+    let searchController = UISearchController(searchResultsController: nil)
+    
+
+    func filterContentForSearchText(searchText: String, scope: String = "All"){
+        filteredMeat = allmeat.filter{ meat in return meat.Ingtype.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        tableView!.reloadData();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleMeat()
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+    
     }
 
+    
     // MARK:  Inititialization
     func loadSampleMeat() {
         let beef_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
         let beef = IngridentTypes(type : "Beef", photo: UIImage(named: "Ox"), sub_names: beef_sub)!
         
-        let chick_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
+        let chick_sub = ["chicken_breast", "chicken_cutlets", "chicken_tender","chicken_wings","beef_shank"]
         let chick = IngridentTypes(type : "Chick", photo: UIImage(named: "Chicken"), sub_names: chick_sub)!
 
         let pork_sub = ["beef_chuck", "beef_loin", "beef_rib","beef_round", "beef_shank"]
@@ -41,12 +62,22 @@ class MeatController: UIViewController,UITableViewDataSource {
     }
     // MARK: Table view data source
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return allmeat[section].Ingtype
+        if searchController.active && searchController.searchBar.text != "" {
+            return filteredMeat[section].Ingtype
+        }
+        else {
+            return allmeat[section].Ingtype
+        }
     }
 
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return allmeat.count
+//        return allmeat.count
+        if searchController.active && searchController.searchBar.text != ""{
+            return filteredMeat.count
+        } else {
+            return allmeat.count
+        }
     }
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,17 +87,40 @@ class MeatController: UIViewController,UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
         // Get current row and assign item numbers
-        let cur_meat = allmeat[indexPath.section]
-//        print("I am here, count =")
+        //let cur_meat = allmeat[indexPath.section]
+        let cur_meat : IngridentTypes
+        if searchController.active && searchController.searchBar.text != ""{
+            cur_meat = filteredMeat[indexPath.section]
+        } else {
+            cur_meat = allmeat[indexPath.section]
+        }
+        
+        
+        // print("I am here, count =")
 
         cell.num_sec = cur_meat.sub_imgs.count;
-//        print(indexPath.section)
-
+        // print(indexPath.section)
         // Assign image array to UItable View Cell; Including the Image for ingredient, ox, pork, chicken and etc.
-        cell.dic = allmeat[indexPath.section].sub_imgs
-        cell.nm = allmeat[indexPath.section].sub_names
+//        cell.dic = allmeat[indexPath.section].sub_imgs
+//        cell.nm = allmeat[indexPath.section].sub_names
+        
+        print(String(searchController.active))
+        print(" Next ")
+        print(searchController.searchBar.text)
+        print("Section value = ")
+        print(indexPath.section)
+        if searchController.active && searchController.searchBar.text != ""{
+            //cur_meat = filteredMeat[indexPath.section]
+            
+            cell.dic = filteredMeat[indexPath.section].sub_imgs
+            cell.nm = filteredMeat[indexPath.section].sub_names
+        } else {
+            cell.dic = allmeat[indexPath.section].sub_imgs
+            cell.nm = allmeat[indexPath.section].sub_names
+        }
         return cell
     }
+    
 
     
     
@@ -107,4 +161,10 @@ class MeatController: UIViewController,UITableViewDataSource {
     }
     */
 
+}
+
+extension MeatController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
 }
